@@ -203,6 +203,20 @@ python app.py
 
 The app opens a local Gradio address in the terminal. Public sharing is disabled by default. To intentionally create a temporary public Gradio link, set `GRADIO_SHARE=1` before launching the app. Anyone with that link may be able to access the running demo while it is active. Do not enter private or sensitive text.
 
+## Publish the project dashboard with GitHub Pages
+
+The interactive results dashboard is stored at `docs/index.html`. To publish it as a website:
+
+1. Open the repository on GitHub.
+2. Select **Settings**.
+3. In the left sidebar, select **Pages** under **Code and automation**.
+4. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+5. Set the branch to **main** and the folder to **/docs**.
+6. Click **Save**.
+7. Wait for the Pages deployment to complete, then open [the project website](https://Abeni-style.github.io/GEREX-TigrinyaLens/).
+
+The dashboard is a static research summary. Its **Try the live model demo** link launches the separate Colab/Gradio app; it does not run the model inside GitHub Pages.
+
 ## Repository structure
 
 ~~~text
