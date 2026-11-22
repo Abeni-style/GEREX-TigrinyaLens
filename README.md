@@ -233,6 +233,10 @@ GEREX-TigrinyaLens/
 
 Review the dataset terms and the NLLB model card's license and usage restrictions before deploying or redistributing a hosted version. The model weights are downloaded at runtime and are not stored in this repository.
 
+## License and reuse
+
+This repository is public, but it does not currently include a project-level license. Public visibility alone does not grant blanket permission to reuse or redistribute the team's code. The team should agree on and add a code license before explicitly granting reuse rights. The FLORES+ dataset and NLLB-200 model have their own separate terms; review those source terms independently.
+
 ## FAQ
 
 <details>
