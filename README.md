@@ -47,6 +47,8 @@ We compare English-to-Tigrinya and English-to-French outputs from the same pretr
 
 ## Explore the project
 
+[**Open the project results dashboard**](https://Abeni-style.github.io/GEREX-TigrinyaLens/) *(available after GitHub Pages is enabled for the `/docs` folder; setup instructions are below).*
+
 | Resource | What it is |
 |---|---|
 | [**Live demo notebook**](notebooks/TigrinyaLens_Colab_Demo.ipynb) | Launch the interactive translator so a visitor can enter an English sentence and compare Tigrinya and French outputs. |
@@ -235,7 +237,7 @@ Review the dataset terms and the NLLB model card's license and usage restriction
 
 ## License and reuse
 
-This repository is public, but it does not currently include a project-level license. Public visibility alone does not grant blanket permission to reuse or redistribute the team's code. The team should agree on and add a code license before explicitly granting reuse rights. The FLORES+ dataset and NLLB-200 model have their own separate terms; review those source terms independently.
+The original code and documentation authored for this repository by Team GEREX are released under the **MIT License**. See [LICENSE](LICENSE). This permission applies only to the project code and documentation covered by that file. It does **not** relicense or grant additional rights to the NLLB-200 model or weights, the FLORES+ dataset, third-party libraries, logos, names, or other external material. Each of those remains subject to its own license, terms, and usage restrictions. The team should verify ownership and permission for any material contributed by third parties before reusing it.
 
 ## FAQ
 
