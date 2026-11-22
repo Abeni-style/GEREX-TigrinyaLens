@@ -84,6 +84,10 @@ flowchart TD
 
 The **live demo** is a separate inference interface. It accepts new English text and sends it to the same model. New demo inputs are not part of the 100-sentence benchmark and do not change the research results.
 
+### Team-added experiment
+
+Beyond the core comparison and native-speaker review, the research notebook includes a targeted test of `no_repeat_ngram_size=3` to investigate whether a decoding constraint can reduce repetition loops. The experiment code is included in the notebook. The current published metric tables do not contain a saved before/after corpus score for this intervention, so the repository does **not** claim that it improved translation quality.
+
 ## Research design
 
 | Component | Setting |
