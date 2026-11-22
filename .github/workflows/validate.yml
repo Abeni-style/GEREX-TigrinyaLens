@@ -24,9 +24,10 @@ jobs:
       - name: Check application syntax
         run: python -m py_compile app.py
 
-      - name: Validate notebook JSON and required project files
+      - name: Validate notebooks, code-cell syntax, and required files
         run: |
           python - <<'PY'
+          import ast
           import json
           from pathlib import Path
 
@@ -45,14 +46,42 @@ jobs:
           if missing:
               raise SystemExit("Missing required files: " + ", ".join(missing))
 
-          for path in (
+          notebook_paths = [
               Path("notebooks/TigrinyaLens_Colab_Demo.ipynb"),
               Path("notebooks/TigrinyaLens_Research.ipynb"),
-          ):
+          ]
+
+          for path in notebook_paths:
               notebook = json.loads(path.read_text(encoding="utf-8"))
               if notebook.get("nbformat") != 4 or not isinstance(notebook.get("cells"), list):
                   raise SystemExit(f"Invalid notebook structure: {path}")
-              print(f"Validated {path}: {len(notebook['cells'])} cells")
 
-          print("Repository structure and notebook JSON checks passed.")
+              checked = 0
+              for index, cell in enumerate(notebook["cells"]):
+                  if cell.get("cell_type") != "code":
+                      continue
+                  source = "".join(cell.get("source", []))
+                  if not source.strip():
+                      continue
+
+                  # Strip standalone IPython magics and shell commands.
+                  python_lines = [
+                      line for line in source.splitlines()
+                      if not line.lstrip().startswith(("%", "!"))
+                  ]
+                  code = "\n".join(python_lines).strip()
+                  if not code:
+                      continue
+
+                  try:
+                      ast.parse(code, filename=f"{path}:cell-{index}")
+                  except SyntaxError as exc:
+                      raise SystemExit(
+                          f"Python syntax error in {path}, cell {index}: {exc}"
+                      ) from exc
+                  checked += 1
+
+              print(f"Validated {path}: {len(notebook['cells'])} cells, {checked} Python code cells")
+
+          print("Repository structure, notebook JSON, and Python syntax checks passed.")
           PY
