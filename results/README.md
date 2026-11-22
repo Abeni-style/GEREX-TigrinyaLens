@@ -34,3 +34,7 @@ The individual raters are labelled Rater 1, Rater 2 and Rater 3. Their personal 
 ## Draft report
 
 - `one_page_writeup_draft.md` — report draft populated from the recorded experiment outputs. Review it before reuse or submission.
+
+## Additional decoding experiment
+
+The research notebook also tests `no_repeat_ngram_size=3` as a targeted intervention for repeated phrase loops. The code is present in the notebook, but the current published metric tables do not contain a saved before/after corpus score for this intervention. Do not describe it as a demonstrated improvement without rerunning and recording that comparison.
