@@ -1,0 +1,10 @@
+datasets
+transformers
+sentencepiece
+sacrebleu
+huggingface_hub
+pandas
+numpy
+matplotlib
+scipy
+gradio
