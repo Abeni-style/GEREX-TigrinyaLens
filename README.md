@@ -269,3 +269,9 @@ No. It is an educational research prototype for inspecting model behaviour. Outp
 
 **GEREX** — TigrinyaLens research project.
 
+- Amaniel Mebrahtom
+- Ambassador Girmay
+- Abenezer Shebabaw
+
+Kallamino Special High School, Ethiopia.
+
