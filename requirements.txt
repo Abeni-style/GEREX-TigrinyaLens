@@ -1,0 +1,5 @@
+gradio>=4.44,<6
+transformers>=4.40,<5
+sentencepiece
+accelerate
+torch
