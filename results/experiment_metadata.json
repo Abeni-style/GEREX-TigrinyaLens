@@ -1,0 +1,41 @@
+{
+  "project": "TigrinyaLens: Testing English-to-Tigrinya Translation Quality",
+  "team_name": "GEREX",
+  "team_members": [
+    {
+      "name": "Amaniel Mebrahtom",
+      "email": "amanuelmebrahtom14@gmail.com",
+      "school": "Kallamino Special High School"
+    },
+    {
+      "name": "Ambassador Girmay",
+      "email": "ambasadergrmay2020@gmail.com",
+      "school": "Kallamino Special High School"
+    },
+    {
+      "name": "Abenezer Shebabaw",
+      "email": "abenezeruniverseiq@gmail.com",
+      "school": "Kallamino Special High School"
+    }
+  ],
+  "dataset_id": "openlanguagedata/flores_plus",
+  "tigrinya_configuration": "tir_Ethi",
+  "french_configuration": "fra_Latn",
+  "split": "devtest",
+  "model": "facebook/nllb-200-distilled-600M",
+  "source_language": "eng_Latn",
+  "tigrinya_language": "tir_Ethi",
+  "french_language": "fra_Latn",
+  "number_of_test_examples": 100,
+  "random_seed": 42,
+  "decoding_methods": [
+    "greedy (num_beams=1)",
+    "beam search (num_beams=4)"
+  ],
+  "device": "cuda",
+  "pytorch_version": "2.14.1+cu130",
+  "datasets_version": "5.2.0",
+  "transformers_version": "5.24.0",
+  "sacrebleu_version": "2.6.0",
+  "timestamp_utc": "2026-11-22T13:59:05.500218+00:00"
+}

@@ -1,0 +1,15 @@
+TIGRINYALENS — SHORT, BLINDED HUMAN EVALUATION
+
+WHAT TO RATE: Rate the Tigrinya MODEL OUTPUT produced by NLLB-200 (beam search). Do NOT rate the FLORES+ reference. The reference and automatic chrF score are intentionally not included in your file.
+
+Read the English source, then judge whether the Tigrinya model output preserves its meaning and is natural and grammatical. Different valid wording is acceptable.
+
+Complete the same 10 examples independently. Do not discuss ratings with the other evaluators until all three files are complete.
+
+Use whole-number scores from 1 to 5:
+Meaning: 1 = meaning mostly wrong or missing; 3 = partly correct; 5 = meaning faithfully preserved.
+Fluency: 1 = difficult to understand; 3 = understandable but unnatural; 5 = natural and clear.
+Grammar: 1 = serious grammatical problems; 3 = noticeable problems; 5 = grammatical and clear.
+
+Error categories: no_obvious_error, incorrect_meaning, omission, grammar, names_numbers, unnatural_wording, other.
+Add a short comment when it helps explain a problem. Do not edit example_id, English, or Tigrinya model output. Save your completed file with its original filename.
