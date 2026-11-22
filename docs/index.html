@@ -86,7 +86,7 @@
       <tr><td>Decoding</td><td>Greedy search and beam search (4 beams)</td></tr>
       <tr><td>Metrics</td><td>chrF (primary) and BLEU (secondary)</td></tr>
     </table>
-    <p>We also used an English-copy negative control and inspected low-scoring translations. A low automatic score was treated as a reason to inspect a sentence, not as proof that the output was wrong.</p>
+    <p>We also used an English-copy negative control, inspected low-scoring translations, and tested <code>no_repeat_ngram_size=3</code> as a possible way to reduce repetition loops. The current published tables do not include a saved before/after corpus score for that intervention, so we do not claim a demonstrated improvement. A low automatic score was treated as a reason to inspect a sentence, not as proof that the output was wrong.</p>
   </section>
 
   <section id="human" class="tab card" role="tabpanel" aria-labelledby="tab-human" hidden>
