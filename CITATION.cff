@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use or build on TigrinyaLens, please cite the project and acknowledge the original dataset and model."
 title: "TigrinyaLens: Testing English-to-Tigrinya Translation Quality"
 version: 0.1.0
+license: MIT
 date-released: 2026-11-22
 authors:
   - family-names: Mebrahtom
