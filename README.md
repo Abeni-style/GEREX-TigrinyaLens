@@ -146,6 +146,26 @@ The team also conducted a small, blinded review of **10 NLLB-200 Tigrinya beam-s
 
 This is exploratory evidence from a small sample, not a representative survey of Tigrinya speakers. Human assessment and automatic metrics answer related but different questions.
 
+## Download the recorded experiment outputs
+
+The [results folder](results/) contains the team's recorded metrics, charts, translation examples, anonymized human ratings, and a draft write-up. Start with the [results guide](results/README.md).
+
+| Artifact | Contents |
+|---|---|
+| [Automatic metrics](results/translation_metrics.csv) | chrF and BLEU by language and decoding method |
+| [Baseline comparison](results/translation_metrics_with_baseline.csv) | Model results alongside the English-copy negative control |
+| [chrF chart](results/chrf_comparison.png) | Visual comparison of language scores |
+| [Human ratings](results/human_ratings_all.csv) | 30 anonymized ratings from three evaluators |
+| [Human summary](results/human_ratings_summary.csv) | Per-example mean ratings and chrF |
+| [Human/chrF correlation](results/human_chrf_correlation.csv) | Exploratory Spearman analysis |
+| [Low-scoring examples](results/tigrinya_five_lowest_chrf.csv) · [French](results/french_five_lowest_chrf.csv) | Examples selected for manual inspection |
+| [Experiment metadata](results/experiment_metadata.json) | Reproducibility settings and library versions |
+| [Write-up draft](results/one_page_writeup_draft.md) | Automatically populated report draft |
+
+The exact reported beam-search chrF values are 25.17 for Tigrinya and 68.97 for French (rounded to 25.2 and 69.0 in the presentation). The mean human rating was 2.50/5 across 10 unique Tigrinya translations, each independently reviewed by three evaluators. The overall mean-rating Spearman correlation was approximately 0.732 (p = 0.016, n = 10); with only ten unique examples, this is exploratory.
+
+Some CSVs contain dataset-derived text and human assessment records. Follow the FLORES+ terms, cite the dataset, and do not redistribute data beyond what its terms allow. Individual rater contact details are not published.
+
 ## Reproduce the experiment
 
 [**Open the research notebook in Colab**](https://colab.research.google.com/github/Abeni-style/GEREX-TigrinyaLens/blob/main/notebooks/TigrinyaLens_Research.ipynb)
