@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use or build on TigrinyaLens, please cite the project and acknowledge the original dataset and model."
+title: "TigrinyaLens: Testing English-to-Tigrinya Translation Quality"
+version: 0.1.0
+date-released: 2026-11-22
+authors:
+  - family-names: Mebrahtom
+    given-names: Amaniel
+    affiliation: Kallamino Special High School
+  - family-names: Girmay
+    given-names: Ambassador
+    affiliation: Kallamino Special High School
+  - family-names: Shebabaw
+    given-names: Abenezer
+    affiliation: Kallamino Special High School
+abstract: >-
+  TigrinyaLens compares English-to-Tigrinya and English-to-French translation
+  outputs from the pretrained NLLB-200 Distilled 600M model using aligned
+  FLORES+ devtest examples, chrF and BLEU metrics, and a small blinded
+  evaluation by native Tigrinya-speaking team members. It is an educational
+  research prototype and not a certified translation service.
+keywords:
+  - machine translation
+  - Tigrinya
+  - FLORES+
+  - NLLB-200
+  - chrF
+  - human evaluation
