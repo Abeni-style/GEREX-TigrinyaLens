@@ -12,7 +12,7 @@ Tigrinya speakers may rely on machine translation to understand information orig
 TigrinyaLens translates the same 100 English sentences into Tigrinya and French using NLLB-200. We compare greedy decoding and beam-4 decoding against professional FLORES+ references. The intended user is a Tigrinya-speaking student or community member seeking to understand English text. This is an evaluation prototype, not a guarantee of translation correctness.
 
 ## What we added
-Three Tigrinya-speaking team members independently reviewed 10 blinded Tigrinya translations for meaning, fluency, and grammar (1-5 scale). We compared the average human scores with sentence-level chrF using Spearman rank correlation and categorized the most frequent translation errors.
+Three Tigrinya-speaking team members independently reviewed 10 blinded Tigrinya translations for meaning, fluency, and grammar (1-5 scale). We compared the average human scores with sentence-level chrF using Spearman rank correlation and categorized the most frequent translation errors. We also tested `no_repeat_ngram_size=3` as a targeted decoding constraint for repetition loops. The notebook contains this experiment, but no saved before/after corpus score is included in the published result tables, so we do not claim a measured improvement.
 
 ## How it works
 Data: 100 paired English sentences and corresponding French and Tigrinya references from the devtest split of openlanguagedata/flores_plus.
