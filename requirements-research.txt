@@ -1,6 +1,7 @@
 datasets
 transformers
 sentencepiece
+torch
 sacrebleu
 huggingface_hub
 pandas
@@ -8,3 +9,4 @@ numpy
 matplotlib
 scipy
 gradio
+ipython
